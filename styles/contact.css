@@ -1,0 +1,400 @@
+
+* {
+	box-sizing: border-box;
+}
+
+html, body { 
+ background-color: #FFFFFF;
+ height: 92%;
+}
+
+#wrapper {
+ height: auto;
+ min-height: 100%;
+ width: auto;
+ margin: 7em 1em 0em 1em;
+ border: solid #FF3600 1px;
+ position: relative;
+ z-index: 800;
+}
+
+#name-left-corner{
+  margin: 0;
+  padding-left: 2.5em;
+  padding-top: 0.3em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 90%;
+}
+
+#name-left-corner:hover{
+  text-decoration: underline;
+}
+
+/*Menu icon and drop down menu*/
+.hamburger {
+  display: block;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  margin: 20px 20px 0px 0px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: background 0.3s;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+/*middelste dash van hamburger*/
+.hamburger span { 
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  right: 4px;
+  height: 4px;
+  background: grey;
+}
+
+/*bovenste en onderste dash hamburger*/
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: grey;
+  content: "";
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.hamburger span::before {
+  top: -8px;
+  transition-property: top, transform;
+}
+
+.hamburger span::after {
+  bottom: -8px;
+  transition-property: bottom, transform;
+}
+
+/* active = menu open */
+
+.hamburger.is-active span {
+  background: none;
+}
+
+.hamburger.is-active span::before {
+  top: 0;
+  background: #FF6001;
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active span::after {
+  bottom: 0;
+  background: #FF6001;
+  transform: rotate(-45deg);
+}
+
+.hamburger.is-active span::before,
+.hamburger.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+
+/*dropdown menu*/
+#menu {
+  position: relative;
+  float: right;
+  margin: 0;
+  z-index: 999;
+}
+
+.dropdown-menu{
+  display: none;
+  margin-left: 20%;
+  margin-right: 0;
+  margin-bottom: 0;
+  float: none;
+  overflow: hidden;
+  
+}
+
+.dropdown-menu li {
+  list-style: none;
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.dropdown-menu a:hover{
+  color: #FF6001;
+}
+
+.expand {
+ display: inline-block !important; 
+}
+
+#header {
+  font-family: 'Volkhov', serif;
+  font-size: 200%;
+  position: relative;
+  z-index: 500;
+}
+
+
+#sara{
+  padding: 0;
+  margin-left: 20%;
+  float: none;
+  position: relative;
+  z-index: 500;
+  overflow: hidden;
+  font-size: 200%;
+  color: #FF6001;
+  cursor: default;
+}
+
+/*contact circkels*/
+
+.circle {
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0 1em 0 1em;
+    width: 20%;
+    float: left;
+}
+
+.circle::after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 0;
+    margin-bottom: 20px;
+    padding-bottom: 100%;
+    width: 100%;
+    background-color: #CCCCC9;
+}
+
+.circle div {
+    color: black;
+    float: left;
+    line-height: 1em;
+    margin-top: -0.5em;
+    padding-top: 50%;
+    text-align: center;
+    width: 100%;
+}
+
+/*confetti*/
+
+.confetti-container {
+  position: relative;
+  z-index: 9999;
+  margin-bottom: 5em;
+}
+
+.confetti {
+width: 25px;
+height: 25px;
+margin-top: -100px;
+-moz-border-radius: 30px;
+-webkit-border-radius: 30px;
+border-radius: 30px;
+position:relative;
+animation:confetti 5s;
+-webkit-animation:confetti 5s;
+animation-iteration-count: 1;
+-moz-animation-iteration-count: 1;
+-webkit-animation-iteration-count: 1;
+-o-animation-iteration-count: 1; /* Safari and Chrome */
+}
+
+@keyframes confetti {
+0% {top:0px;}
+100% {top:1500px;}
+}
+
+@-webkit-keyframes confetti /* Safari and Chrome */{
+0% {top:0px;}
+100% {top:1500px;}
+}
+
+.confetti1, .confetti2, .confetti3, .confetti4 {
+background-color: #FF822E;
+}
+
+.confetti1 .confetti12 {
+animation-delay:1s;
+-webkit-animation-delay:1s;
+}
+
+.confetti1 {
+margin-left: 50px;
+}
+
+.confetti2 {
+margin-left: 300px;
+}
+
+.confetti3, .confetti6, .confetti20 {
+animation-delay:1.5s;
+-webkit-animation-delay:1.5s;
+}
+
+.confetti3 {
+margin-left: 800px;
+}
+
+.confetti4 {
+margin-left: 600px;
+animation-delay:3s;
+-webkit-animation-delay:3s;
+}
+
+.confetti5, .confetti6, .confetti7 {
+background-color: #FF6517;;
+}
+
+.confetti5 {
+margin-left: 700px;
+}
+
+.confetti6 {
+margin-left: 200px;
+}
+
+.confetti7, .confetti8 {
+animation-delay:4.5s;
+-webkit-animation-delay:4.5s;
+}
+
+.confetti17 {
+margin-left: 100px;
+}
+
+.confetti8, .confetti9, .confetti10, .confetti11 {
+background-color: #FFA00A;
+}
+
+.confetti8 {
+margin-left: 200px;
+}
+
+.confetti9 {
+margin-left: 900px;
+}
+
+.confetti10, .confetti14, .confetti18 {
+animation-delay:2.5s;
+-webkit-animation-delay:2.5s;
+}
+
+.confetti10 {
+margin-left: 550px;
+}
+
+.confetti11 {
+margin-left: 350;
+animation-delay:2s;
+-webkit-animation-delay:2s;
+}
+
+.confetti12, .confetti13, .confetti14 {
+background-color: #A2AEAA;
+}
+
+.confetti12 {
+margin-left: 350;
+}
+
+.confetti13 {
+margin-left: 620;
+animation-delay:4s;
+-webkit-animation-delay:4s;
+}
+
+.confetti14 {
+margin-left: 570;
+}
+
+.confetti15, .confetti16, .confetti17, .confetti18 {
+background-color: #FF8000;
+}
+
+.confetti15 {
+margin-left: 650px;
+}
+
+.confetti16 {
+margin-left: 100px;
+animation-delay:4s;
+-webkit-animation-delay:4s;
+}
+
+.confetti17, .confetti21 {
+animation-delay:.5s;
+-webkit-animation-delay:.5s;
+}
+
+.confetti17 {
+margin-left: 250px;
+}
+
+.confetti18 {
+margin-left: 450px;
+}
+
+.confetti19, .confetti20, .confetti21 {
+background-color: #FF822E;
+}
+
+.confetti19 {
+margin-left: 450px;
+}
+
+.confetti20 {
+margin-left: 850px;
+}
+
+.confetti21 {
+margin-left: 200px;
+}
+
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 90%;
+  color: #FF6001 !important;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+footer a:hover{
+  color: grey !important;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
